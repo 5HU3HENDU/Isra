@@ -59,6 +59,8 @@ div img {
 }
 
 footer {
+  bottom: 0;
+  position: fixed;
   width: 80%;
   text-align: center;
   margin: 0 auto;
