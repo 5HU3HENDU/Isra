@@ -1,66 +1,42 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Isra</title>
+  <meta charset="utf-8">
+  <!-- <link rel="icon" href="/favicon.ico"> -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#000000">
+  <meta name="description" content="Isra Aman Aziz | Personal Website">
+  <!-- <link rel="apple-touch-icon" href="/logo192.png"> -->
+  <!-- <link rel="manifest" href="/manifest.json"> -->
+  <title>Isra Aman Aziz</title>
+  <!-- <script defer="defer" src="/static/js/main.c59f797f.js"></script> -->
+  <link href="style.css" rel="stylesheet">
 </head>
+
 <body>
-<h1>Isra Aman Aziz</h1>
-<div>
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-<ul>
-<li><img src = "https://picsum.photos/1200"> </li>
-<li><img src = "https://picsum.photos/1300"> </li>
-<li><img src = "https://picsum.photos/1400"> </li>
-<li><img src = "https://picsum.photos/1500"> </li>
-<li><img src = "https://picsum.photos/1600"> </li>
-<li><img src = "https://picsum.photos/1700"> </li>
-<li><img src = "https://picsum.photos/1800"> </li>
-<li><img src = "https://picsum.photos/1900"> </li>
-
-
-</ul>
+  <h1>Isra Aman Aziz</h1>
+  <div>
+    <label for='tab1Content'>About Me</label>
+    <label for='tab2Content'>Work</label>
+    <label for='tab3Content'>Writings</label>
+    <br />
+    <br />
+    <input type='radio' name='content' id='tab1Content' checked='true' />
+    <div>Tab 1 content <img src="https://picsum.photos/1200"></div>
+    <input type='radio' name='content' id='tab2Content' />
+    <div>Tab 2 content <img src="https://picsum.photos/1400"></div>
+    <input type='radio' name='content' id='tab3Content' />
+    <div>Tab 3 content <img src="https://picsum.photos/1600"></div>
 
 
 
-</div>
-
-<script>
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByTagName("li");
-  // let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  //for (i = 0; i < dots.length; i++) {
-    // dots[i].className = dots[i].className.replace(" active", "");
-  // }
-  slides[slideIndex-1].style.display = "block";
-  // dots[slideIndex-1].className += " active";
-}
+  </div>
 
 
-
-</script>
 
 
 
 </body>
+
 </html>
