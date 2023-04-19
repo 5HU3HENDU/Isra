@@ -1,15 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
 body {
   background-color: #000000;
   color: #ffffff;
-  
+  font-family: 'Dongle', sans-serif;
+
+
+}
+
+h1 {
+  font-size: 4em;
 }
 
 
 #nav {
   margin: 0 auto;
   width: 100%;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   text-align: center;
+  font-size: 2.5em;
 
 }
 
@@ -19,7 +28,7 @@ label {
   display: inline-block;
   width: 30%;
   text-align: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   color: #ffffff;
   /* padding: 10px 15px; */
   /* background: #f2f2f2; */
@@ -48,6 +57,7 @@ input[name=content]:checked+div {
   display: block;
   width: 80%;
   margin: 0 auto;
+  font-size: 2em;
 }
 
 div img {
@@ -61,14 +71,15 @@ div img {
 
 footer {
   bottom: 0;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   text-align: center;
   margin: 0 auto;
-  border: 1px solid red;
+  font-size:1.5em;
+  /* border: 1px solid red; */
 
 }
 
-#copyright {
+#copyright:active {
   color: blue;
 }
