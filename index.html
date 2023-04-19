@@ -26,6 +26,8 @@
     <label for='tab2Content'>Works</label>
     <label for='tab3Content'>Extras</label>
   </div>
+
+
   <br />
   <br />
   <input type='radio' name='content' id='tab1Content' checked='true' />
@@ -52,7 +54,7 @@
     <br>
     <br>
     Damn, you really wanna know?<br>Okay, so I'm also into music, synth, Korean Drama, K-POP, Bollywood, Hollywood,
-    Hindi, English, New, Old, Sufi and LoFi kinda stuff.<br>Will talk about the kind of foods I'm into someday
+    Hindi, English, New, Old, Sufi and LoFi kinda stuff.<br>Will talk about the kind of foods I'm into, someday
     else.<br>Cya for now, gotta sleep!!!
 
 
@@ -60,14 +62,61 @@
 
 
 
-  <br> <br>
+  <p id="balloon-container">
+  </p>
+
 
   <footer>
     <hr>
     &#169; - <span id="copyright">April 20</span>01 to Present...
 
+
   </footer>
 
+
+  <script>
+    function random(num) {
+      return Math.floor(Math.random() * num)
+    }
+
+    function getRandomStyles() {
+      var r = random(255);
+      var g = random(255);
+      var b = random(255);
+      var mt = random(200);
+      var ml = random(50);
+      var dur = random(5) + 5;
+      return `
+  background-color: rgba(${r},${g},${b},0.7);
+  color: rgba(${r},${g},${b},0.7); 
+  box-shadow: inset -7px -3px 10px rgba(${r - 10},${g - 10},${b - 10},0.7);
+  margin: ${mt}px 0 0 ${ml}px;
+  animation: float ${dur}s ease-in infinite
+  `
+    }
+
+    function createBalloons(num) {
+      var balloonContainer = document.getElementById("balloon-container")
+      for (var i = num; i > 0; i--) {
+        var balloon = document.createElement("div");
+        balloon.className = "balloon";
+        balloon.style.cssText = getRandomStyles(); balloonContainer.append(balloon);
+      }
+    }
+
+    bd = '203';
+    now = new Date()
+    td = now.getDate() + '' + now.getMonth()
+    if (bd == td) {
+      createBalloons(20);
+
+    }
+
+    /* window.onload = function() {
+      createBalloons(20);
+    } 
+     */
+  </script>
 
 </body>
 
